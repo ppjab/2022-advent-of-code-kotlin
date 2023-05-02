@@ -14,7 +14,7 @@ object Day03 {
     fun part2(input: List<String>) = input
         .chunked(3)
         .map { it.map(String::toSet) }
-        .flatMap { it.reduce(Set<Char>::intersect)}
+        .flatMap { it.reduce(Set<Char>::intersect) }
         .sumOf { prioritiesMap[it] ?: 0 }
         .also { println(it) }
 }
